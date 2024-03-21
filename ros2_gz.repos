@@ -1,19 +1,19 @@
 repositories:
   ardupilot:
     type: git
-    url: https://github.com/ArduPilot/ardupilot.git
+    url: https://github.com/flaperon-co/ardupilot.git
     version: master
   ardupilot_gazebo:
     type: git
-    url: https://github.com/ArduPilot/ardupilot_gazebo.git
+    url: https://github.com/flaperon-co/ardupilot_gazebo.git
     version: ros2
   ardupilot_gz:
     type: git
-    url: https://github.com/ArduPilot/ardupilot_gz.git
+    url: https://github.com/flaperon-co/ardupilot_gz.git
     version: main
   ardupilot_sitl_models:
     type: git
-    url: https://github.com/ArduPilot/SITL_Models.git
+    url: https://github.com/flaperon-co/SITL_Models.git
     version: main
   micro_ros_agent:
     type: git

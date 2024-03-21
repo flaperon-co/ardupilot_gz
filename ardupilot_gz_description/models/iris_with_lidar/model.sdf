@@ -24,7 +24,7 @@
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
       <cda>0.10</cda>
-      <cma>0.0</cma>
+      <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
       <cma_stall>0.0</cma_stall>
@@ -41,7 +41,7 @@
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
       <cda>0.10</cda>
-      <cma>0.0</cma>
+      <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
       <cma_stall>0.0</cma_stall>
@@ -59,7 +59,7 @@
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
       <cda>0.10</cda>
-      <cma>0.0</cma>
+      <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
       <cma_stall>0.0</cma_stall>
@@ -76,7 +76,7 @@
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
       <cda>0.10</cda>
-      <cma>0.0</cma>
+      <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
       <cma_stall>0.0</cma_stall>
@@ -94,7 +94,7 @@
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
       <cda>0.10</cda>
-      <cma>0.0</cma>
+      <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
       <cma_stall>0.0</cma_stall>
@@ -111,7 +111,7 @@
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
       <cda>0.10</cda>
-      <cma>0.0</cma>
+      <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
       <cma_stall>0.0</cma_stall>
@@ -129,7 +129,7 @@
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
       <cda>0.10</cda>
-      <cma>0.0</cma>
+      <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
       <cma_stall>0.0</cma_stall>
@@ -146,7 +146,7 @@
       <alpha_stall>1.4</alpha_stall>
       <cla>4.2500</cla>
       <cda>0.10</cda>
-      <cma>0.0</cma>
+      <cma>0.00</cma>
       <cla_stall>-0.025</cla_stall>
       <cda_stall>0.0</cda_stall>
       <cma_stall>0.0</cma_stall>
@@ -284,7 +284,7 @@
 
 
     <link name="base_scan">
-      <pose>0 0 0.075077 0 0 0</pose>
+      <pose>0 0 0.27 0 0 0</pose>
       <inertial>
         <mass>0.1</mass>
         <inertia>
@@ -317,24 +317,29 @@
         <update_rate>10</update_rate>
         <lidar>
           <scan>
-            <horizontal>
-              <samples>640</samples>
-              <resolution>1</resolution>
-              <min_angle>-3.14159265</min_angle>
-              <max_angle>3.14159265</max_angle>
-            </horizontal>
-            <vertical>
-              <samples>1</samples>
-              <resolution>1</resolution>
-              <min_angle>0.0</min_angle>
-              <max_angle>0.0</max_angle>
-            </vertical>
+              <horizontal>
+                <samples>32</samples>
+                <resolution>1</resolution>
+                <min_angle>-0.3630285</min_angle>
+                <max_angle>0.3403392</max_angle>            
+              </horizontal>
+              <vertical>
+                <samples>2000</samples>
+                <resolution>1</resolution>
+                <min_angle>-3.14159</min_angle>
+                <max_angle>3.14159</max_angle>
+              </vertical>
           </scan>
           <range>
-            <min>0.08</min>
-            <max>10.0</max>
+            <min>0.5</min>
+            <max>80.0</max>
             <resolution>0.01</resolution>
           </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0.0</mean>
+            <stddev>0.008</stddev>
+          </noise>         
         </lidar>
         <visualize>true</visualize>
       </sensor>
@@ -344,7 +349,7 @@
       <parent>base_link</parent>
       <child>base_scan</child>
       <axis>
-        <xyz>0 0 1</xyz>
+        <xyz>0 1 0</xyz>
         <limit>
           <lower>0</lower>
           <upper>0</upper>
